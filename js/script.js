@@ -73,7 +73,43 @@ btnEnviar.onclick = function () {
         return text.includes(valor);
     })
      
+    var pregIvan = "roger ivan,roger,roger ochoa,roger fernandez,ivan ochoa,ivan fernandez,ochoa fernandez";
+    var Ivanx = pregIvan.split(",");
+    var valorIvan = Ivanx.find(function (valor) {
+        return text.includes(valor);
+    })
 
+    var pregJunior = "junior evaristo,junior jara,jose junior,jose evaristo,jose jara,jose";
+    var Juniorx = pregJunior.split(",");
+    var valorJunior = Juniorx.find(function (valor) {
+        return text.includes(valor);
+    })
+
+    var pregHans = "arnold hans,arnold mays,arnold melendez,mays melendez,hans,mays";
+    var Hansx = pregHans.split(",");
+    var valorHans = Hansx.find(function (valor) {
+        return text.includes(valor);
+    })
+
+
+    var pregMartin = "jherson hamilton,jherson martin,jherson artica,martin,hamilton martin,hamilton artica,jherson,hamilton";
+    var Martinx = pregMartin.split(",");
+    var valorMartin = Hansx.find(function (valor) {
+        return text.includes(valor);
+    })
+
+    var pregFabian = "miguel angel,miguel fabian,fabian,angel fabian,fabian sangama,angel sangama,miguel sangama";
+    var Fabianx = pregFabian.split(",");
+    var valorFabian = Fabianx.find(function (valor) {
+        return text.includes(valor);
+    })
+
+
+    var pregPelis = "muestrame peliculas,abre peliculas,reproduce peliculas,muestrame peli,peliculas";
+    var Pelix = pregPelis.split(",");
+    var valorPelit = Pelix.find(function (valor) {
+        return text.includes(valor);
+    })
 
 
 
@@ -89,7 +125,13 @@ btnEnviar.onclick = function () {
     var fue = "No entiendo lo que me quieres decir, aún estoy en desarrollo y no logro entender muchas cosas";
     var mantenimientoxt = "Servicio no disponible por temas de mantenimiento Fabian esta mejorando dicho servicio, puedes revisar en la tabla los diferentes comandos";
     var mantenimientox = "Para buscar personas solo escriba un nombre y un apellido"
-    var peli = "Nombres, josé orlando, apellidos, castillo cornelio, dni, 46364875, dirección, HUANUCO, LEONCIO PRADO, RUPA-RUPA, jirón Alfonso ugarte";
+    var peli = "Nombres, josé orlando, apellidos, castillo cornelio, dni, 46364875, dirección, Huánuco, LEONCIO PRADO, RUPA-RUPA, jirón Alfonso ugarte";
+    var ivan = "Nombres, ROGER IVAN, apellidos, Ochoa Fernandez, dni, 76264195, dirección, SAN MARTIN, TOCACHE, PÓLVORA, CENTRO POBLADO NUEVO SAN MARTIN"
+    var junior = "Nombres, JOSE JUNIOR, Apellidos, Evaristo Jara, dni, 77706675, dirección, Huánuco, PACHITEA, UMARI, CASERIO SAN MARCOS"
+    var martin = "Nombres, JHERSON HAMILTON, Apellidos, Martin Artica, dni, 72756369, dirección, Huánuco, LEONCIO PRADO, JOSE CRESPO Y CASTILLO, MARIA PARADO DE BELLIDO MZ C"
+    var hans = "Nombres, Arnold Hans, Apellidos, Mays Melendez, dni, 75696755, dirección, Huánuco, Leoncio Prado, Santo Domingo de Anda, Caserío Arabe"
+    var fabian = "Nombres, Miguel Angel, Apellidos, Fabián Sangama, dni, 74950634, dirección, Huánuco, Leoncio Prado, Pueblo Nuevo"
+    var pelis = "Abriendo Peliculas7"
     var restaun = "Abriendo Menú ejecutivo";
 
     var speechSynthesis = window.speechSynthesis;
@@ -108,11 +150,27 @@ btnEnviar.onclick = function () {
         speechUtterance.text = clima;
     } else if (valorDni) {
         speechUtterance.text = mantenimientox;
+    } else if (valorJunior) {
+        speechUtterance.text = junior;
+    } else if (valorIvan) {
+        speechUtterance.text = ivan;
+    } else if (valorHans) {
+        speechUtterance.text = hans;
+    } else if (valorMartin) {
+        speechUtterance.text = martin;
+    } else if (valorPelit) {
+        speechUtterance.text = pelis;
+        var link = document.createElement('a');
+        link.href = "https://thezero27.github.io/PeliPlayer";
+        link.target = "_blank"; // Te abre xD pero en otra pestaña
+        link.click();
+    } else if (valorFabian) {
+        speechUtterance.text = fabian;
     } else if (valorRestn) {//AQUI
         speechUtterance.text = restaun;
         //open("https://thezero27.github.io/Restaurant-Fabian")
         var link = document.createElement('a');
-        link.href = "https://thezero27.github.io/PelixPlayer";
+        link.href = "https://thezero27.github.io/Restaurant-Fabian";
         link.target = "_blank"; // Te abre xD pero en otra pestaña
         link.click();
     } else {

@@ -148,7 +148,7 @@ body {
     border: green solid 10px;
 }
 
-table {
+/* table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
@@ -163,4 +163,55 @@ th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+} */
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #fb0404;
+    margin-bottom: 20px;
+}
+
+.responsive-table th,
+.responsive-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.responsive-table th {
+    /* background-color: #f2f2f2; */
+    background: linear-gradient(to bottom, #131212, #b0aeaf);
+}
+
+/* Estilos para hacerla responsive */
+@media (max-width: 600px) {
+    .responsive-table {
+        border: 0;
+    }
+
+    .responsive-table thead {
+        display: none;
+    }
+
+    .responsive-table tr {
+        margin-bottom: 10px;
+        display: block;
+        border: 1px solid #ddd;
+    }
+
+    .responsive-table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .responsive-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 8px;
+        font-weight: bold;
+    }
 }
