@@ -170,8 +170,8 @@ btnEnviar.onclick = function () {
         speechUtterance.text = restaun;
         //open("https://thezero27.github.io/Restaurant-Fabian")
         var link = document.createElement('a');
-        link.href = "https://thezero27.github.io/Restaurant-Fabian";
-        link.target = "_blank"; // Te abre xD pero en otra pestaña
+        link.href = "https://thezero27.github.io/Restaurant";
+        link.target = "_blank"; // Te abre xD pero en otra pestaña D1
         link.click();
     } else {
         speechUtterance.text = fue;
